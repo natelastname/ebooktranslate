@@ -1,0 +1,39 @@
+[project]
+name = "translater"
+version = "0.1.0"
+description = "A python module"
+readme = "README.md"
+authors = [
+  { name = "Nathan Nichols", email = "communications@resultsmotivated.com" },
+]
+
+[project.scripts]
+# Makes 'spam-cli' an executable on PATH
+spam-cli = "translater.util:replace_me"
+
+[tool.poetry]
+version = "2.1.1"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4"
+loguru = "^0.7.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8"
+black = "^24.4.2"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+src_paths = ["translater",]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning",
+    "ignore:.*unclosed.*:ResourceWarning",
+]
+env = [
+    "READAPP2_ENVIRONMENT=pytest",
+    "READAPP2_DB_BASE=readapp2_test",
+]
