@@ -1,5 +1,4 @@
-# -*- mode: org -*-
-#+TITLE:
-#+AUTHOR: nate
-#+DATE: <2025-04-08>
-#+KEYWORDS:
+
+* ebooktranslate
+
+Translate EPUBs using [argostranslate](https://github.com/argosopentech/argos-translate)
