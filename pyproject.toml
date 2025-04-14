@@ -9,7 +9,7 @@ authors = [
 
 [project.scripts]
 # Makes 'spam-cli' an executable on PATH
-spam-cli = "translater.util:replace_me"
+ebook-translate = "translater.cli:run0"
 
 [tool.poetry]
 version = "2.1.1"
@@ -17,6 +17,12 @@ version = "2.1.1"
 [tool.poetry.dependencies]
 python = ">=3.10,<4"
 loguru = "^0.7.3"
+readabilipy = "^0.3.0"
+translatehtml = "^1.5.2"
+argostranslate = "^1.9.6"
+ebooklib = "^0.18"
+rich-click = "^1.8.8"
+dataclass-click = "^1.0.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8"
@@ -32,8 +38,4 @@ filterwarnings = [
     "error",
     "ignore::DeprecationWarning",
     "ignore:.*unclosed.*:ResourceWarning",
-]
-env = [
-    "READAPP2_ENVIRONMENT=pytest",
-    "READAPP2_DB_BASE=readapp2_test",
 ]
